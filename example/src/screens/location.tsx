@@ -5,7 +5,7 @@ import {
   ButtonExperience,
 } from '@components';
 import { Colors } from '@colors';
-import { CustomerIO } from 'customerio-reactnative';
+import { CustomerIO } from 'zixflow-reactnative';
 import React, { useState } from 'react';
 import {
   Alert,
@@ -75,7 +75,7 @@ export const LocationScreen = () => {
 
   const setLocation = (lat: number, lng: number, source: string) => {
     try {
-      CustomerIO.location.setLastKnownLocation(lat, lng);
+      Zixflow.location.setLastKnownLocation(lat, lng);
       setLastSetLocation({ lat, lng, source });
       setSdkRequestingLabel(false);
       showMessage({
@@ -126,7 +126,7 @@ export const LocationScreen = () => {
       const result = await request(LOCATION_PERMISSION);
       if (result === RESULTS.GRANTED || result === RESULTS.LIMITED) {
         setSdkRequestingLabel(true);
-        CustomerIO.location.requestLocationUpdate();
+        Zixflow.location.requestLocationUpdate();
         showMessage({
           message: 'SDK requested location update',
           type: 'success',

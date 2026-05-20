@@ -1,12 +1,12 @@
 dependencies {
-    api "io.customer.android:datapipelines:$cioAndroidSDKVersion"
-    api "io.customer.android:messaging-push-fcm:$cioAndroidSDKVersion"
-    api "io.customer.android:messaging-in-app:$cioAndroidSDKVersion"
+    api "com.zixflow.com.android:datapipelines:$zixflowAndroidSDKVersion"
+    api "com.zixflow.com.android:messaging-push-fcm:$zixflowAndroidSDKVersion"
+    api "com.zixflow.com.android:messaging-in-app:$zixflowAndroidSDKVersion"
     // Location module is optional - customers enable it by adding
-    // customerio_location_enabled=true in their gradle.properties
-    if (project.cioLocationEnabled) {
-        api "io.customer.android:location:$cioAndroidSDKVersion"
+    // zixflow_location_enabled=true in their gradle.properties
+    if (project.zixflowLocationEnabled) {
+        api "com.zixflow.com.android:location:$zixflowAndroidSDKVersion"
     } else {
-        compileOnly "io.customer.android:location:$cioAndroidSDKVersion"
+        compileOnly "com.zixflow.com.android:location:$zixflowAndroidSDKVersion"
     }
 }

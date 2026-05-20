@@ -3,7 +3,7 @@
 #import <React/RCTEventEmitter.h>
 #import <React/RCTInitializing.h>
 #import <React/RCTInvalidating.h>
-#import <RNCustomerIOSpec/RNCustomerIOSpec.h>
+#import <RNZixflowSpec/RNZixflowSpec.h>
 
 // Protocol that extends the spec with setEventEmitter method
 @protocol NativeMessagingInAppBridge <NativeCustomerIOMessagingInAppSpec, RCTInitializing, RCTInvalidating>

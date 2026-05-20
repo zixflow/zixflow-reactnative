@@ -1,7 +1,7 @@
 {
-  "name": "customerio-reactnative",
-  "version": "6.4.2",
-  "description": "Official Customer.io SDK using React Native. Track customers and send messages to your iOS/Android apps.",
+  "name": "zixflow-reactnative",
+  "version": "1.0.0",
+  "description": "Official Zixflow SDK for React Native. Customer engagement platform built on proven Customer.io technology. Track customers and send messages to your iOS/Android apps.",
   "source": "./src/index.ts",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -19,8 +19,10 @@
     },
     "./package.json": "./package.json"
   },
-  "cioNativeiOSSdkVersion": "= 4.4.1",
-  "cioiOSFirebaseWrapperSdkVersion": "= 1.0.0",
+  "zixflowNativeiOSSdkVersion": "= 1.0.0",
+  "zixflowNativeAndroidSdkVersion": "1.0.0",
+  "cioNativeiOSSdkVersion": "~> 3.10",
+  "cioiOSFirebaseWrapperSdkVersion": "~> 1.0",
   "files": [
     "src",
     "lib",
@@ -55,13 +57,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/customerio/customerio-reactnative",
-  "author": "CustomerIO Team <win@customer.io> (https://customer.io/)",
+  "repository": "https://github.com/zixflow/zixflow-reactnative",
+  "author": "Zixflow Team <apps@zixflow.com> (https://zixflow.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/customerio/customerio-reactnative/issues"
+    "url": "https://github.com/zixflow/zixflow-reactnative/issues"
   },
-  "homepage": "https://github.com/customerio/customerio-reactnative#readme",
+  "homepage": "https://github.com/zixflow/zixflow-reactnative#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -141,7 +143,7 @@
     "@eslint/plugin-kit": "0.3.4"
   },
   "codegenConfig": {
-    "name": "RNCustomerIOSpec",
+    "name": "RNZixflowSpec",
     "type": "all",
     "jsSrcsDir": "./src/specs",
     "android": {

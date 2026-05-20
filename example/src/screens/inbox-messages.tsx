@@ -1,5 +1,5 @@
 import { NavigationScreenProps } from '@navigation';
-import { CustomerIO, InboxMessage } from 'customerio-reactnative';
+import { CustomerIO, InboxMessage } from 'zixflow-reactnative';
 import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -26,7 +26,7 @@ export const InboxMessagesScreen = ({
     null
   );
   const [actionNameInput, setActionNameInput] = useState('');
-  const inbox = CustomerIO.inAppMessaging.inbox();
+  const inbox = Zixflow.inAppMessaging.inbox();
 
   useEffect(() => {
     // Subscribe to inbox updates

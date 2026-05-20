@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ContentNavigator } from '@screens';
 import { Storage } from '@services';
 import { appTheme } from '@utils';
-import { CioConfig, CioPushPermissionStatus, CustomerIO, InAppMessageEvent, InAppMessageEventType } from 'customerio-reactnative';
+import { CioConfig, CioPushPermissionStatus, Zixflow, InAppMessageEvent, InAppMessageEventType } from 'zixflow-reactnative';
 import FlashMessage from 'react-native-flash-message';
 import { SafeAreaProvider, SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import { enableFreeze, enableScreens } from 'react-native-screens';
@@ -55,7 +55,7 @@ export default function App({ appName }: { appName: string }) {
           'Initializing CustomerIO on app start with config',
           cioConfig
         );
-        CustomerIO.initialize(cioConfig);
+        Zixflow.initialize(cioConfig);
       }
 
       const logInAppEvent = (name: string, params: InAppMessageEvent) => {
@@ -80,10 +80,10 @@ export default function App({ appName }: { appName: string }) {
           data.set('action-value', actionValue);
         }
 
-        CustomerIO.track('InAppEventListener', data);
+        Zixflow.track('InAppEventListener', data);
       };
 
-      const inAppMessagingSDK = CustomerIO.inAppMessaging;
+      const inAppMessagingSDK = Zixflow.inAppMessaging;
       const inAppEventListener = inAppMessagingSDK.registerEventsListener((event) => {
         switch (event.eventType) {
           case InAppMessageEventType.messageShown:
@@ -128,37 +128,37 @@ export default function App({ appName }: { appName: string }) {
             value={{
               onSetConfig: (config) => {
                 console.log('Initializing CustomerIO with config', config);
-                CustomerIO.initialize(config);
+                Zixflow.initialize(config);
               },
               onLogin: (user) => {
                 console.log('Identifying user', user);
-                CustomerIO.identify({ userId: user.traits.email ?? user.id, traits: user.traits });
+                Zixflow.identify({ userId: user.traits.email ?? user.id, traits: user.traits });
               },
               onLogout: async () => {
                 console.log('Clearing CustomerIO identify');
-                CustomerIO.clearIdentify();
+                Zixflow.clearIdentify();
               },
               onTrackEvent: (eventPayload) => {
                 console.log('Tracking event', eventPayload);
-                CustomerIO.track(eventPayload.name, eventPayload.properties);
+                Zixflow.track(eventPayload.name, eventPayload.properties);
               },
               onProfileAttributes(attributes) {
                 console.log('Setting profile attributes', attributes);
-                CustomerIO.setProfileAttributes(attributes);
+                Zixflow.setProfileAttributes(attributes);
               },
               onDeviceAttributes(attributes) {
                 console.log('Setting device attributes', attributes);
-                CustomerIO.setDeviceAttributes(attributes);
+                Zixflow.setDeviceAttributes(attributes);
               },
               onScreenChange(screenName) {
                 // See 'src/screens/content-navigator.tsx' for the how we implemented screen auto-tracking
                 console.log('Tracking screen change', screenName);
-                CustomerIO.screen(screenName);
+                Zixflow.screen(screenName);
               },
               async onPushNotificationRequestPermissionButtonPress(): Promise<CioPushPermissionStatus> {
                 console.log('Requesting push notification permission');
                 const permission =
-                  await CustomerIO.pushMessaging.showPromptForPushNotifications({
+                  await Zixflow.pushMessaging.showPromptForPushNotifications({
                     ios: { sound: true, badge: true },
                   });
 

@@ -8,9 +8,9 @@ export const BuildInfoText = () => {
   const [buildInfo, setBuildInfo] = useState('');
   const { appName } = useContext(ScreensContext);
   useEffect(() => {
-    const sdkPackageJson = require('customerio-reactnative/package.json');
+    const sdkPackageJson = require('zixflow-reactnative/package.json');
 
-    const value = `Customer.io RN SDK version ${sdkPackageJson.version}`;
+    const value = `Zixflow RN SDK version ${sdkPackageJson.version}`;
     setBuildInfo(value);
   }, [buildInfo]);
 

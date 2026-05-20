@@ -1,6 +1,6 @@
 set -e
 
-# Installs Customer.IO React Native SDK either from npm (if version is provided) or from a local tarball (default).
+# Installs Zixflow React Native SDK either from npm (if version is provided) or from a local tarball (default).
 # Usage:
 # cd apps/APN/ # make sure you run this script from the root directory of the sample app.
 # It's recommended to add this to the package.json of the sample app:
@@ -23,7 +23,7 @@ set -e
 #
 
 # Define constants
-PACKAGE_NAME="customerio-reactnative"
+PACKAGE_NAME="zixflow-reactnative"
 PACKAGE_PATH_RELATIVE=${1:-..} # Default package path to `..` if no argument is provided
 TARBALL_NAME=$PACKAGE_NAME.tgz
 TARBALL_PATTERN=$PACKAGE_NAME-*.tgz

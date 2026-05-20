@@ -1,4 +1,4 @@
-import { CioPushPermissionStatus } from 'customerio-reactnative';
+import { CioPushPermissionStatus } from 'zixflow-reactnative';
 import { createContext } from 'react';
 import { ContentNavigatorCallbacks } from './props';
 

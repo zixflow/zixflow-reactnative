@@ -1,8 +1,9 @@
 /**
- * This file serves as the entry point for the module customerio-reactnative.
+ * This file serves as the entry point for the module zixflow-reactnative.
+ *
+ * This SDK is a customized fork of the Customer.io React Native SDK,
+ * optimized for use with the Zixflow platform.
  */
-export * from './customerio-cdp';
-export * from './customerio-inapp';
-export * from './customerio-location';
-export * from './customerio-push';
-export * from './types';
+
+// Export ONLY the Zixflow-branded API (no backward compatibility with CustomerIO names)
+export * from './zixflow';

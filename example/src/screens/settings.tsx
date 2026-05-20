@@ -13,7 +13,7 @@ import {
   CioLogLevel,
   CioRegion,
   CustomerIO,
-} from 'customerio-reactnative';
+} from 'zixflow-reactnative';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { showMessage } from 'react-native-flash-message';
@@ -114,10 +114,10 @@ export const SettingsScreen = () => {
                 type: 'warning',
               });
             } else {
-              CustomerIO.initialize(config as CioConfig);
+              Zixflow.initialize(config as CioConfig);
               showMessage({
                 message:
-                  'CustomerIO settings saved successfully and CustomerIO.initialize() has been called with the new settings',
+                  'CustomerIO settings saved successfully and Zixflow.initialize() has been called with the new settings',
                 type: 'success',
               });
             }

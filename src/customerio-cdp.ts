@@ -17,7 +17,7 @@ import type { NativeSDKArgs } from './types/internal';
 import { callNativeModule, ensureNativeModule } from './utils/native-bridge';
 import { assert, validate } from './utils/param-validation';
 
-const packageJson = require('customerio-reactnative/package.json');
+const packageJson = require('../../package.json');
 
 // Track whether CustomerIO SDK has been initialized to prevent usage before setup
 let _initialized = false;

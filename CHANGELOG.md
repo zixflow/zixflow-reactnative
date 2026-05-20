@@ -1,3 +1,31 @@
+## [1.0.0] - 2026-05-19
+
+### Added
+- 🎉 **Initial Zixflow React Native SDK release** (forked from Customer.io v6.4.2)
+- `Zixflow` class for SDK initialization and core methods
+- `ZixflowInAppMessaging` for in-app messaging functionality
+- `ZixflowPushMessaging` for push notification handling
+- `ZixflowLocation` for location tracking
+- Type aliases: `ZixflowConfig` and other Zixflow-branded types
+- Native dependencies: Zixflow iOS SDK v1.0.0 and Android SDK v1.0.0
+- Full TypeScript support with updated type definitions
+- React Native New Architecture (TurboModules) support
+- Comprehensive documentation and examples
+
+### Changed
+- Package name: `customerio-reactnative` → `zixflow-reactnative`
+- Main class: `CustomerIO` → `Zixflow` (via type alias)
+- Configuration type: `CioConfig` → `ZixflowConfig` (via type alias)
+- Repository: https://github.com/zixflow/zixflow-reactnative
+- Documentation: https://zixflow.com/docs/sdk/react-native/
+
+### Notes
+This is a customized fork of the Customer.io React Native SDK v6.4.2, optimized for the Zixflow platform. All branding and APIs have been updated to Zixflow while maintaining the proven functionality of the Customer.io SDK.
+
+The public API uses type aliases for clean Zixflow branding while maintaining internal implementation compatibility. Module properties (inAppMessaging, pushMessaging, location) use the internal implementation but all functionality works as expected.
+
+---
+
 ## [6.4.2](https://github.com/customerio/customerio-reactnative/compare/6.4.1...6.4.2) (2026-04-24)
 
 ### Bug Fixes

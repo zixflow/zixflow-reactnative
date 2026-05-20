@@ -1,6 +1,6 @@
 #import "utils/RCTCustomerIOUtils.h"
 #import <React/RCTBridgeModule.h>
-#import <RNCustomerIOSpec/RNCustomerIOSpec.h>
+#import <RNZixflowSpec/RNZixflowSpec.h>
 
 // Objective-C wrapper for new architecture TurboModule implementation
 @interface RCTNativeCustomerIO : NSObject <NativeCustomerIOSpec>

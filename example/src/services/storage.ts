@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { User } from '@utils';
-import { CioConfig, CioLocationTrackingMode, CioLogLevel, CioRegion } from 'customerio-reactnative';
+import { CioConfig, CioLocationTrackingMode, CioLogLevel, CioRegion } from 'zixflow-reactnative';
 import { Env } from '../env';
 
 const USER_STORAGE_KEY = 'user';
@@ -11,6 +11,8 @@ type Config = Partial<CioConfig>;
 const createDefaultConfig = (env: Env | null | undefined): Config => {
   return {
     cdpApiKey: env?.API_KEY ?? '',
+    apiHost: env?.API_HOST,
+    cdnHost: env?.CDN_HOST,
     inApp: {
       siteId: env?.SITE_ID ?? '',
     },

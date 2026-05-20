@@ -3,11 +3,11 @@
 
 #import <React/RCTConversions.h>
 #import <React/RCTFabricComponentsPlugins.h>
-#import <react/renderer/components/RNCustomerIOSpec/ComponentDescriptors.h>
-#import <react/renderer/components/RNCustomerIOSpec/EventEmitters.h>
-#import <react/renderer/components/RNCustomerIOSpec/Props.h>
-#import <react/renderer/components/RNCustomerIOSpec/RCTComponentViewHelpers.h>
-#import <react/renderer/components/RNCustomerIOSpec/ShadowNodes.h>
+#import <react/renderer/components/RNZixflowSpec/ComponentDescriptors.h>
+#import <react/renderer/components/RNZixflowSpec/EventEmitters.h>
+#import <react/renderer/components/RNZixflowSpec/Props.h>
+#import <react/renderer/components/RNZixflowSpec/RCTComponentViewHelpers.h>
+#import <react/renderer/components/RNZixflowSpec/ShadowNodes.h>
 
 using namespace facebook::react;
 
