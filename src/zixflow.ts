@@ -17,4 +17,8 @@ export * from './types';
 export * from './notification-inbox';
 
 // Export sub-modules with their original names (they work with the main Zixflow class)
-export { CustomerIOInAppMessaging, CustomerIOLocation, CustomerIOPushMessaging };
+export {
+  CustomerIOInAppMessaging,
+  CustomerIOLocation,
+  CustomerIOPushMessaging,
+};
